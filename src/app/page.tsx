@@ -143,9 +143,7 @@ function AXSection() {
         </div>
         <div data-reveal data-delay="200" className="flex flex-col gap-7 pt-1 max-w-[720px]">
           <p className="text-[clamp(16px,3vw,20px)] font-light text-[#111]/60 leading-[1.7]">
- 그럴듯한 발표 자료, 완성되지 못한 파일럿 프로젝트.
-<br />
-결과는 같았습니다. “도입은 했지만, 달라진 건 없다.”
+ 그럴듯한 발표 자료, 하지만 결과는 같았습니다. 도입은 했지만, 달라진 건 없었다...
 <br />
 AI는 유행이 아닙니다. 성과를 만드는 구조적 변화입니다.
 <br />
@@ -153,7 +151,7 @@ AI는 유행이 아닙니다. 성과를 만드는 구조적 변화입니다.
 지금 바로 작동하고, 지속적으로 확장 가능한 AI 인프라를 설계합니다.
           </p>
       
-            <p className="text-[24px] font-bold text-[#111] leading-[1.5]">
+            <p className="text-[32px] font-bold text-[#111] pt-15 leading-[1.5]">
               "우리는 보여주기 위한 AI를 만들지 않습니다."
             </p>
             <p className="text-[clamp(16px,3vw,20px)] font-light text-[#111]/70 leading-[1.7]">
@@ -271,11 +269,11 @@ function ProcessSection() {
           {steps.map((s, i) => (
             <div key={s.num} data-reveal data-delay={i * 120} className="flex bg-[#111]" style={{ clipPath: 'polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 12px)' }}>
               {/* 좌측 번호 */}
-              <div className="w-[70px] shrink-0 bg-white flex items-start justify-center pt-[30px]">
+              <div className="w-[70px] shrink-0 bg-[#999] flex items-start justify-center pt-[30px]">
                 <span className="text-[36px] font-bold text-[#111] leading-none">{s.num}</span>
               </div>
               {/* 우측 텍스트 */}
-              <div className="flex flex-col gap-[10px] px-[25px] py-[15px] flex-1">
+              <div className="flex flex-col gap-[10px] px-[25px] py-[15px] flex-1 bg-[#333]">
                 <p className="text-[30px] font-bold text-white leading-[2.1]">{s.enTitle}</p>
                 <p className="text-[clamp(18px,3vw,22px)] font-semibold text-white/70 leading-[1.5]">{s.koTitle}</p>
                 <p className="text-[clamp(16px,3vw,20px)] text-white/50 leading-[1.7]">{s.desc}</p>

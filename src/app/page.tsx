@@ -46,7 +46,7 @@ function Navbar() {
         <a
           href="#contact"
           className="hidden md:inline-flex items-center text-[14px] font-normal tracking-[0.1em] text-white bg-[#111] px-[30px] h-[36px] hover:bg-[#333] transition-colors"
-          style={{ clipPath: 'polygon(24px 0, 100% 0, 100% 100%, 0 100%, 0 24px)' }}
+          style={{ clipPath: 'polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 12px)' }}
         >
           Contact
         </a>
@@ -112,7 +112,7 @@ function HeroSection() {
         <a
           href="#contact"
           className="inline-flex items-center gap-3 text-[18px] font-semibold tracking-[0.1em] text-[#111] bg-white px-[70px] py-3 hover:bg-white/70 transition-all"
-          style={{ clipPath: 'polygon(36px 0, 100% 0, 100% 100%, 0 100%, 0 36px)' }}
+          style={{ clipPath: 'polygon(18px 0, 100% 0, 100% 100%, 0 100%, 0 18px)' }}
         >
           상담하기
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -269,7 +269,7 @@ function ProcessSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
           {steps.map((s, i) => (
-            <div key={s.num} data-reveal data-delay={i * 120} className="flex bg-[#111]" style={{ clipPath: 'polygon(24px 0, 100% 0, 100% 100%, 0 100%, 0 24px)' }}>
+            <div key={s.num} data-reveal data-delay={i * 120} className="flex bg-[#111]" style={{ clipPath: 'polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 12px)' }}>
               {/* 좌측 번호 */}
               <div className="w-[70px] shrink-0 bg-white flex items-start justify-center pt-[30px]">
                 <span className="text-[36px] font-bold text-[#111] leading-none">{s.num}</span>

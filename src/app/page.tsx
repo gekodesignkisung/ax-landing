@@ -36,7 +36,7 @@ function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="text-[14px] font-semibold tracking-[0.1em] text-[#003040] hover:text-[#999] transition-colors"
+              className="text-[14px] font-semibold tracking-[0.1em] text-[#000000] hover:text-[#999] transition-colors"
             >
               {l.label}
             </a>
@@ -44,7 +44,7 @@ function Navbar() {
         </nav>
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center text-[14px] font-normal tracking-[0.1em] text-white bg-[#003040] px-[30px] h-[36px] hover:bg-[#333] transition-colors"
+          className="hidden md:inline-flex items-center text-[14px] font-normal tracking-[0.1em] text-white bg-[#000000] px-[30px] h-[36px] hover:bg-[#333] transition-colors"
           style={{ clipPath: 'polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)' }}
         >
           Contact
@@ -86,7 +86,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-[64px] bg-[#003040]"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-[64px] bg-[#000000]"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -99,13 +99,13 @@ function HeroSection() {
 
       <div className="relative z-10 max-w-[860px]">
 
-        <h1 className="text-[clamp(160px,40vw,300px)] font-bold leading-[1.02] tracking-[-0.03em] text-white mb-0">
+        <h1 className="text-[clamp(160px,40vw,320px)] font-black leading-[1.02] tracking-[-0.03em] text-white mb-0">
           AX?
         </h1>
-        <h1 className="text-[clamp(16px,6vw,36px)] font-light leading-[1.5] tracking-[-0.03em] text-white mb-10">
+        <h1 className="text-[clamp(16px,6vw,40px)] font-light leading-[1.4] tracking-[-0.03em] text-white mb-10">
           AX는 새로 배워야 할 도구가 아니라<br />새롭게 일하는 방식입니다.
         </h1>
-        <p className="text-[clamp(16px,4.5vw,24px)] font-light text-white/50 leading-[1.4] max-w-[720px] mx-auto mb-12">
+        <p className="text-[clamp(16px,4.5vw,22px)] font-light text-white/50 leading-[1.4] max-w-[720px] mx-auto mb-12">
           일하는 방식에서 조직의 문화까지 완전히 재설계하는 진짜 혁신을 경험하세요.
         </p>
         <a
@@ -135,19 +135,26 @@ function AXSection() {
           AX?
         </p>
         <div data-reveal data-delay="100">
-          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold tracking-[-0.03em] leading-[1.4] text-[#003040]">
+          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold tracking-[-0.03em] leading-[1.7] text-[#000000]">
             많은 기업이 AI를 이야기합니다.<br />
-            그러나 실제로 일하는 방식이 바뀐 조직은 거의 없습니다.
+            그러나 실제로 {'일하는 방식'.split('').map((char, i) => (
+              char === ' ' ? <span key={i}> </span> : (
+                <span key={i} className="relative inline-block">
+                  {char}
+                  <span className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white" />
+                </span>
+              )
+            ))}이 바뀐 곳은 거의 없습니다.
           </h2>
         </div>
         <div data-reveal data-delay="200" className="flex flex-col gap-7 pt-1 max-w-[720px]">
-          <p className="text-[clamp(16px,3vw,22px)] font-lighr text-[#003040]/60 leading-[1.7]">
-            그럴듯한 발표 자료, 도입은 했지만, 달라진 건 없었다.
+          <p className="text-[clamp(16px,3vw,22px)] font-bold text-[#000000]/50 leading-[1.7]">
+            그럴듯한 발표 자료, 도입은 했지만 달라진 건 없었다.
             <br />
             AI는 유행이 아닙니다. 성과를 만드는 구조적 변화입니다.
             <br />
 
-            지금 바로 작동하고, 지속적으로 확장 가능한 AI 인프라를 설계합니다.
+            지금 바로 작동하고 확장 가능한 AI 인프라를 설계합니다.
           </p>
 
 
@@ -155,12 +162,12 @@ function AXSection() {
 
         </div>
         <div data-reveal data-delay="200">
-          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold tracking-[-0.03em] leading-[1.4] text-[#003040] mt-10">
+          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold tracking-[-0.03em] leading-[1.7] text-[#000000] mt-10">
             우리는 보여주기 위한 AI를 만들지 않습니다.
           </h2>
         </div>
         <div data-reveal data-delay="200" className="flex flex-col gap-7 pt-1 max-w-[720px]">
-          <p className="text-[clamp(16px,3vw,22px)] font-lighr text-[#003040]/60 leading-[1.7]">
+          <p className="text-[clamp(16px,3vw,22px)] font-bold text-[#000000]/50 leading-[1.7]">
             AI는 유행이 아니라 혁신을 이끌어낼 날카로운 무기입니다.
             <br />
             우리는 당장 내일의 업무에서 눈에 보이는 성과를 내는 '진짜 AI'를 만듭니다.
@@ -205,8 +212,13 @@ function ServicesSection() {
             SERVICES
           </p>
 
-          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold leading-[1.25] tracking-[-0.02em] text-[#003040]">
-            본질을 이해하고, 구조를 바꾸는 AX 솔루션.
+          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold leading-[1.7] tracking-[-0.02em] text-[#000000]">
+            본질을 이해하고, {'구조'.split('').map((char, i) => (
+              <span key={i} className="relative inline-block">
+                {char}
+                <span className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white" />
+              </span>
+            ))}를 바꾸는 AX 솔루션.
           </h2>
         </div>
         <div className="flex flex-col gap-[24px] md:gap-[40px]  pt-[24px] md:pt-[40px]">
@@ -219,7 +231,7 @@ function ServicesSection() {
             >
               {/* 좌측 — 모바일: 세로, md+: 480px 고정 */}
               <div
-                className="md:w-[480px] md:shrink-0 flex items-center gap-[30px] bg-[#003040] px-[30px] py-[20px]"
+                className="md:w-[480px] md:shrink-0 flex items-center gap-[30px] bg-[#000000] px-[30px] py-[20px]"
                 style={{ clipPath: 'polygon(34px 0, 100% 0, 100% 100%, 0 100%, 0 34px)' }}
               >
                 <span className="text-[clamp(36px,3vw,60px)] font-light text-white leading-none shrink-0">{s.num}</span>
@@ -262,25 +274,30 @@ const steps = [
 
 function ProcessSection() {
   return (
-    <section id="process" className="py-[80px] md:py-[120px] px-6 bg-[#003040]">
+    <section id="process" className="py-[80px] md:py-[120px] px-6 bg-[#000000]">
       <div className="max-w-[1200px] mx-auto">
         <div data-reveal className="mb-10 md:mb-16 text-center">
           <p className="text-[18px] font-extrabold text-white/45 leading-[1] pb-10">
             PROCESS
           </p>
-          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold leading-[1.2] tracking-[-0.02em] text-white">
-            복잡함을 제거하고, 본질만 남깁니다.
+          <h2 className="text-[clamp(30px,3.5vw,40px)] font-bold leading-[1.7] tracking-[-0.02em] text-white">
+            복잡함을 제거하고 {'본질'.split('').map((char, i) => (
+              <span key={i} className="relative inline-block">
+                {char}
+                <span className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white" />
+              </span>
+            ))}만 남깁니다.
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]  md:max-w-[1080px] md:mx-auto w-full">
           {steps.map((s, i) => (
-            <div key={s.num} data-reveal data-delay={i * 120} className="flex bg-[#003040]" style={{ clipPath: 'polygon(34px 0, 100% 0, 100% calc(100% - 34px), calc(100% - 34px) 100%, 0 100%, 0 34px)' }}>
+            <div key={s.num} data-reveal data-delay={i * 120} className="flex bg-[#000000]" style={{ clipPath: 'polygon(34px 0, 100% 0, 100% calc(100% - 34px), calc(100% - 34px) 100%, 0 100%, 0 34px)' }}>
               {/* 좌측 번호 */}
-              <div className="w-[70px] shrink-0 bg-[#004050] flex items-start justify-center pt-[40px]">
+              <div className="w-[70px] shrink-0 bg-[#303030] flex items-start justify-center pt-[40px]">
                 <span className="text-[34px] font-light text-[#fff] leading-none">{s.num}</span>
               </div>
               {/* 우측 텍스트 */}
-              <div className="flex flex-col gap-[10px] pr-[30px] py-[22px] flex-1 bg-[#004050]">
+              <div className="flex flex-col gap-[10px] pr-[30px] py-[22px] flex-1 bg-[#303030]">
                 <p className="text-[34px] font-light text-white leading-[2.1]">{s.enTitle}</p>
                 <p className="text-[clamp(18px,3vw,22px)] font-bold text-white/70 leading-[1.5]">{s.koTitle}</p>
                 <p className="text-[clamp(16px,3vw,20px)] text-white/50 leading-[1.5]">{s.desc}</p>
@@ -309,7 +326,7 @@ function CasesSection() {
             <p className="text-[18px] font-extrabold text-[#111]/30 leading-[1] pb-10">
               CASES
             </p>
-            <h2 className="text-[clamp(34px,3.5vw,44px)] font-bold leading-[1.2] tracking-[-0.02em] text-[#003040]">
+            <h2 className="text-[clamp(34px,3.5vw,44px)] font-bold leading-[1.2] tracking-[-0.02em] text-[#000000]">
               포트폴리오
             </h2>
           </div>
@@ -387,7 +404,7 @@ function TeamSection() {
               {/* 이니셜 아바타 + 이름/역할 */}
               <div className="flex items-center gap-6">
                 <div
-                  className="w-[100px] h-[100px] bg-[#003040] flex items-center justify-center text-white text-[26px] font-bold shrink-0"
+                  className="w-[100px] h-[100px] bg-[#000000] flex items-center justify-center text-white text-[26px] font-bold shrink-0"
                   style={{ clipPath: 'polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px)' }}
                 >
                   {m.initials}
@@ -433,15 +450,15 @@ function FAQSection() {
       <div className="max-w-[1200px] mx-auto">
         <div data-reveal className="mb-10 md:mb-16 text-center">
           <p className="text-[18px] font-extrabold text-[#111]/30 leading-[1] pb-10">Q&amp;A</p>
-          <h2 className="text-[clamp(24px,3.5vw,44px)] font-bold leading-[1.2] tracking-[-0.02em] text-[#003040]">
+          <h2 className="text-[clamp(24px,3.5vw,44px)] font-bold leading-[1.2] tracking-[-0.02em] text-[#000000]">
             자주 묻는 질문
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-[1080px] md:mx-auto w-full">
           {faqs.map((faq, i) => (
             <div key={i} data-reveal data-delay={i * 100} className="bg-[#f9f9f9] p-8 flex flex-col gap-5" style={{ clipPath: 'polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px)' }}>
-              <h3 className="text-[clamp(20px,3.5vw,24px)] font-bold text-[#003040] leading-[1.4]">Q. {faq.q}</h3>
-              <p className="text-[clamp(16px,3.5vw,18px)] text-[#003040]/70 leading-[1.5] px-[22px]">{faq.a}</p>
+              <h3 className="text-[clamp(20px,3.5vw,24px)] font-bold text-[#000000] leading-[1.4]">Q. {faq.q}</h3>
+              <p className="text-[clamp(16px,3.5vw,18px)] text-[#000000]/70 leading-[1.5] px-[22px]">{faq.a}</p>
             </div>
           ))}
         </div>
@@ -469,7 +486,7 @@ function ContactSection() {
         <div className="w-full">
           <p data-reveal className="text-[18px] font-extrabold text-[#111]/30 leading-[1] pb-10">CONTACT</p>
           <h2 data-reveal data-delay="100" className="text-[clamp(26px,5vw,40px)] font-bold leading-[1.08] tracking-[-0.03em] text-[#111]">
-            일하는 방식이 완전히 달라집니다.
+            새로운 미래를 만나보세요.
           </h2>
         </div>
         <div data-reveal data-delay="150" className="w-full text-left">
@@ -497,7 +514,7 @@ function ContactSection() {
                 onChange={(e) => setForm({ ...form, message: e.target.value })} required rows={5}
                 className={`${inputCls} resize-none`} />
               <button type="submit"
-                className="mt-2 w-full mt-10 mx-auto block text-[16px] font-semibold tracking-[0.1em] text-white bg-[#003040] py-4 hover:bg-[#333] transition-colors cursor-pointer"
+                className="mt-2 w-full mt-10 mx-auto block text-[16px] font-semibold tracking-[0.1em] text-white bg-[#000000] py-4 hover:bg-[#333] transition-colors cursor-pointer"
                 style={{ clipPath: 'polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px)' }}>
                 보내기
               </button>
@@ -512,7 +529,7 @@ function ContactSection() {
 // ─── Footer ───────────────────────────────────────────────────
 function Footer() {
   return (
-    <footer className="border-t border-black/[0.06] bg-[#003040] px-6 py-20">
+    <footer className="border-t border-black/[0.06] bg-[#000000] px-6 py-20">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-1 text-center">
         <p className="text-[13px] tracking-[0.1em] text-[#fff]/30">© 2026 CORCA, Inc. All rights reserved.</p>
         <p className="text-[13px] text-[#fff]/40">서울특별시 강남구 테헤란로77길 11-8 6층</p>
